@@ -1,0 +1,166 @@
+
+        body{
+            position: relative;
+            background-image: url('https://cdn.pixabay.com/photo/2016/10/13/09/06/travel-1737168_1280.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        input::-webkit-inner-spin-button{
+            -webkit-appearance: none;
+        }
+        .sub-body{
+            background-color: rgba(0,0,0,0.5);
+            background-size: cover;
+        }
+        .heading{
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            background-color: black;
+            margin: auto;
+        }
+        h4{
+            background-color: black;
+            width: 50%;
+            margin: auto;
+            padding: 3px;
+            color: white;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+        h5{
+            margin: auto;width: fit-content;
+            background-color: white;
+            border-top-left-radius: 4px;
+            border-top-right-radius: 4px;
+         }
+        #advance{
+            div{
+                border: 1px solid gray;
+                border-radius: 5px;
+                background-color: white;
+                width: fit-content;
+                margin: auto;
+            }
+            input{
+                border: none;
+                outline: 0;
+                background-color: transparent;
+            }
+        }
+        #error{
+            position:fixed;
+            display: none;
+            top: 10%;
+            left:45%;
+            text-align: center;
+            width: fit-content;
+            background-color: white;
+            color: red;
+            border: 3px solid black;
+            padding: 10px;
+            border-radius: 4px;
+            box-shadow:black 10px 10px 25px;
+        }
+        #d-shade{
+            position:fixed;
+            top: 0px;
+            left: 0px;
+            background-color:rgb(0,0,0,0.5);
+            height: 100vh;
+            width: 100%;
+            display: none;
+        }
+        
+        #roomType,#amenities,#customerInfo,.receipt{
+            display: grid;
+            grid-template-columns: 6fr 6fr;
+            margin: auto;
+            font-family: Verdana;
+            border: 2px solid black;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 3%;
+        }
+            #customerInfo input:hover,img:hover,.ok:hover,.register:hover,#advance div:hover{
+                box-shadow: black 1px 1px 7px;
+            }
+            .back:hover{
+                box-shadow: white 1px 1px 7px;
+            }
+
+            #receipt{
+                display: none;
+            }
+            
+        .receipt{
+            display: grid;
+            width: fit-content;
+            padding: 20px;
+            background-color: white;
+            font-family: monospace;
+            border: none;
+        }
+        #tabContent{
+            background-color: lightblue;
+            padding:10px;
+            width: fit-content;
+            margin: auto;
+            border: 3px solid black;
+            border-bottom-left-radius:10px ;
+            border-bottom-right-radius:10px;
+            border-top: 0;
+            max-height: 93.4vh;
+            overflow-y: scroll;
+            scrollbar-width: none;
+        }
+        input{
+            border-radius: 5px;
+            height: 31px;
+            background-color: white;
+            border: 1px solid gray;
+            width: 90%;
+        }
+        
+        img{
+            border-radius: 5px;
+        }
+        #roomType,#amenities{
+            img,input{
+                cursor: pointer;
+            }
+            input{
+            width: 20px;height: 20px;
+        }
+        }
+        
+
+        @media  only screen and (max-width:600px) {
+            
+          #tabContent{
+            border: none;
+            max-height: fit-content;
+          }
+          
+            #error{
+                left: 2.5%;
+                width: 95%;
+            }
+            
+            #customerInfo{
+                grid-template-columns: 12fr;
+            }
+            .receipt,h5{
+                width: 100%;
+                border-radius: 0px;
+                border-bottom: 1px solid black;
+            }
+        }
+        @media  only screen and (max-width:300px) {
+            #tabContent,#roomType,#amenities,#customerInfo,.receipt{
+            grid-template-columns: 12fr;
+            padding: 0;
+          }
+          h4{
+           min-width: 90%;
+          }
+        }
